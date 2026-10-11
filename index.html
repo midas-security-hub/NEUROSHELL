@@ -22,16 +22,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="NeuroShell Homepage">
-        <svg class="brand-logo-icon" width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Brain Base outline & nodes -->
-          <path d="M20 4C14.4772 4 10 8.47715 10 14C10 15.65 10.4042 17.2057 11.1197 18.5714C8.6791 19.8829 7 22.4925 7 25.5C7 29.6421 10.3579 33 14.5 33C15.6457 33 16.731 32.7431 17.7027 32.2826C18.4239 32.8837 19.3496 33.25 20.3571 33.25C22.014 33.25 23.4475 32.2598 24.0893 30.8393C25.0487 31.5772 26.2483 32 27.5 32C30.5376 32 33 29.5376 33 26.5C33 24.8153 32.2415 23.308 31.0456 22.2981C32.2599 21.0373 33 19.3541 33 17.5C33 13.3579 29.6421 10 25.5 10C24.8436 10 24.212 10.0843 23.6116 10.2417C22.6105 6.5501 19.2435 4 20 4Z" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M15 14C15 14 17 11 20 11C23 11 25 14 25 14" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-          <path d="M12 21C14 19 17 20 20 20C23 20 26 19 28 21" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
-          <!-- Terminal Overlay badge inside brain stem -->
-          <rect x="18" y="22" width="16" height="12" rx="3" fill="#0F172A" stroke="#2563EB" stroke-width="1.5"/>
-          <path d="M21 26L24 28L21 30" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="26" y1="30" x2="30" y2="30" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+        <img class="brand-logo" src="assets/logo/NeuroShell_logo.png" alt="NeuroShell logo">
         <span class="brand-text">NEURO<span class="brand-accent">SHELL</span></span>
       </a>
 
@@ -101,48 +92,7 @@
           </div>
         </div>
 
-        <!-- Right Hero Terminal Widget -->
-        <div class="hero-terminal-wrapper">
-          <div class="terminal-card">
-            <div class="terminal-header">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-            </div>
-            
-            <div class="terminal-body">
-              <!-- Command Prompt Box 1 -->
-              <div class="terminal-box terminal-box--prompt">
-                <span class="prompt-arrow">&gt;</span>
-                <span class="prompt-text">scan the 192.168.1.0/24 subnet for ssh and web ports</span>
-              </div>
-
-              <!-- Down Arrow Divider -->
-              <div class="terminal-connector">
-                <svg width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="2" x2="12" y2="20"></line>
-                  <polyline points="6 14 12 20 18 14"></polyline>
-                </svg>
-              </div>
-
-              <!-- Command Result Box 2 -->
-              <div class="terminal-box terminal-box--result">
-                <div class="result-command">nmap -sS -p 22,80,443 192.168.1.0/24</div>
-                <div class="result-badges">
-                  <span class="pill-badge pill-badge--validated">
-                    validated
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
-                  <span class="pill-badge pill-badge--sandboxed">sandboxed</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-
-      </div>
     </section>
 
     <!-- Sub-header Sticky / Section Quick-Bar -->
@@ -176,27 +126,31 @@
         <div class="overview-grid">
           <!-- Problem Card -->
           <article class="overview-card">
-            <div class="card-icon-circle icon-circle--blue">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
+            <div class="overview-card__header">
+              <div class="card-icon-circle icon-circle--blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <h3 class="overview-card__title">The problem</h3>
             </div>
-            <h3 class="overview-card__title">The problem</h3>
-            <p class="overview-card__text">Penetration testing is still manual and slow, while attack surfaces keep growing. Security teams cannot keep up.</p>
+            <p class="overview-card__text">Penetration testing workflows remain heavily manual and time-consuming, while global attack surfaces expand exponentially creating a dangerous execution gap for security teams.</p>
           </article>
 
           <!-- Solution Card -->
           <article class="overview-card">
-            <div class="card-icon-circle icon-circle--blue">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 18h6"></path>
-                <path d="M10 22h4"></path>
-                <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
-              </svg>
+            <div class="overview-card__header">
+              <div class="card-icon-circle icon-circle--blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                  <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+                </svg>
+              </div>
+              <h3 class="overview-card__title">Our solution</h3>
             </div>
-            <h3 class="overview-card__title">Our solution</h3>
             <p class="overview-card__text">NeuroShell turns a plain-English instruction into safe, validated action. It understands the intent, plans the exact command, runs it in a sandbox, repairs its own errors and ranks the vulnerabilities that matter most.</p>
             
             <div class="solution-pills">
@@ -204,7 +158,7 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                 </svg>
-                Runs fully offline
+                Runs fully Locally
               </span>
               <span class="solution-pill">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -303,7 +257,7 @@
             <h3 class="component-card__title">Intent Engine</h3>
             <div class="component-card__author">Karunarathna P.M.T.L</div>
             <p class="component-card__desc">Turns natural language into validated, structured JSON before anything runs.</p>
-            <a class="component-card__link link--blue" href="domain.html#intent-engine">Learn more &rarr;</a>
+            <button type="button" class="component-card__link link--blue" data-component="intent">Learn more &rarr;</button>
           </article>
 
           <!-- Component 2 -->
@@ -312,7 +266,7 @@
             <h3 class="component-card__title">Dynamic Planner &amp; RAG Engine</h3>
             <div class="component-card__author">Herath H.M.C.H.K</div>
             <p class="component-card__desc">Builds exact Kali Linux commands grounded in real manual pages.</p>
-            <a class="component-card__link link--teal" href="domain.html#planner-rag">Learn more &rarr;</a>
+            <button type="button" class="component-card__link link--teal" data-component="planner">Learn more &rarr;</button>
           </article>
 
           <!-- Component 3 -->
@@ -321,7 +275,7 @@
             <h3 class="component-card__title">Adaptive Executor</h3>
             <div class="component-card__author">Umayanga H.L.A</div>
             <p class="component-card__desc">Runs commands in Docker sandboxes and fixes its own errors.</p>
-            <a class="component-card__link link--emerald" href="domain.html#adaptive-executor">Learn more &rarr;</a>
+            <button type="button" class="component-card__link link--emerald" data-component="executor">Learn more &rarr;</button>
           </article>
 
           <!-- Component 4 -->
@@ -330,7 +284,7 @@
             <h3 class="component-card__title">Vulnerability Triage Engine</h3>
             <div class="component-card__author">Sahan H.P.T</div>
             <p class="component-card__desc">Predicts real-world exploitability and filters out false positives.</p>
-            <a class="component-card__link link--amber" href="domain.html#vulnerability-triage">Learn more &rarr;</a>
+            <button type="button" class="component-card__link link--amber" data-component="triage">Learn more &rarr;</button>
           </article>
         </div>
 
@@ -349,10 +303,10 @@
             <div class="progress-item__head">
               <span class="progress-item__badge badge--blue">01</span>
               <span class="progress-item__title">Intent Engine</span>
-              <span class="progress-item__val">60%</span>
+              <span class="progress-item__val">95%</span>
             </div>
             <div class="progress-bar-track">
-              <div class="progress-bar-fill fill--blue" style="width: 60%;"></div>
+              <div class="progress-bar-fill fill--blue" style="width: 95%;"></div>
             </div>
           </div>
 
@@ -361,10 +315,10 @@
             <div class="progress-item__head">
               <span class="progress-item__badge badge--emerald">03</span>
               <span class="progress-item__title">Adaptive Executor</span>
-              <span class="progress-item__val">55%</span>
+              <span class="progress-item__val">95%</span>
             </div>
             <div class="progress-bar-track">
-              <div class="progress-bar-fill fill--emerald" style="width: 55%;"></div>
+              <div class="progress-bar-fill fill--emerald" style="width: 95%;"></div>
             </div>
           </div>
 
@@ -373,10 +327,10 @@
             <div class="progress-item__head">
               <span class="progress-item__badge badge--teal">02</span>
               <span class="progress-item__title">Planner &amp; RAG</span>
-              <span class="progress-item__val">60%</span>
+              <span class="progress-item__val">95%</span>
             </div>
             <div class="progress-bar-track">
-              <div class="progress-bar-fill fill--teal" style="width: 60%;"></div>
+              <div class="progress-bar-fill fill--teal" style="width: 95%;"></div>
             </div>
           </div>
 
@@ -385,10 +339,10 @@
             <div class="progress-item__head">
               <span class="progress-item__badge badge--amber">04</span>
               <span class="progress-item__title">Vulnerability Triage</span>
-              <span class="progress-item__val">65%</span>
+              <span class="progress-item__val">95%</span>
             </div>
             <div class="progress-bar-track">
-              <div class="progress-bar-fill fill--amber" style="width: 65%;"></div>
+              <div class="progress-bar-fill fill--amber" style="width: 95%;"></div>
             </div>
           </div>
         </div>
@@ -411,73 +365,55 @@
           <!-- Member 1 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/Superviser.png" alt="Dr. Harinda Fernando">
             </div>
-            <div class="avatar-name">Karunarathna P.M.T.L</div>
+            <div class="avatar-name">Dr. Harinda Fernando</div>
             <div class="avatar-role">(Supervisor)</div>
           </div>
 
           <!-- Member 2 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/co - superviser.png" alt="Mr. Indunil Daluwatte">
             </div>
-            <div class="avatar-name">Sujeewa S.K</div>
-            <div class="avatar-role">(Supervisor)</div>
+            <div class="avatar-name">Mr. Indunil Daluwatte</div>
+            <div class="avatar-role">(Co-supervisor)</div>
           </div>
 
           <!-- Member 3 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/Karunarathna.png" alt="Karanurathna P.M.T.L">
             </div>
-            <div class="avatar-name">Kaveesha Nethmina</div>
-            <div class="avatar-role">(Student)</div>
+            <div class="avatar-name">Karanurathna P.M.T.L</div>
+            <div class="avatar-role">(Team Leader)</div>
           </div>
 
           <!-- Member 4 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/Herath.png" alt="Herath H.M.C.H.K">
             </div>
-            <div class="avatar-name">Nethmi Sathsarani</div>
-            <div class="avatar-role">(Student)</div>
+            <div class="avatar-name">Herath H.M.C.H.K</div>
+            <div class="avatar-role">(Member)</div>
           </div>
 
           <!-- Member 5 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/Umayanga.png" alt="Umayanga H.L.A">
             </div>
-            <div class="avatar-name">Tharushi Dilhari</div>
-            <div class="avatar-role">(Student)</div>
+            <div class="avatar-name">Umayanga H.L.A</div>
+            <div class="avatar-role">(Member)</div>
           </div>
 
           <!-- Member 6 -->
           <div class="team-avatar-card">
             <div class="avatar-circle">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="#64748B" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"/>
-                <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z"/>
-              </svg>
+              <img class="avatar-img" src="assets/team/Sahan.png" alt="Sahan H.P.T">
             </div>
-            <div class="avatar-name">Kavindu Perera</div>
-            <div class="avatar-role">(Student)</div>
+            <div class="avatar-name">Sahan H.P.T</div>
+            <div class="avatar-role">(Member)</div>
           </div>
         </div>
 
@@ -565,6 +501,19 @@
     </div>
   </footer>
 
+  <!-- Component Detail Modal -->
+  <div class="component-modal" id="component-modal" hidden>
+    <div class="component-modal__overlay" data-modal-close></div>
+    <div class="component-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="component-modal-title">
+      <button class="component-modal__close" type="button" aria-label="Close details" data-modal-close>&times;</button>
+      <div class="component-modal__badge badge--blue" data-modal-badge>01</div>
+      <h3 class="component-modal__title" id="component-modal-title" data-modal-title></h3>
+      <div class="component-modal__author" data-modal-author></div>
+      <div class="component-modal__body" data-modal-body></div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

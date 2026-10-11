@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NeuroShell milestones, assessments, timeline and project status.">
+  <title>NeuroShell — Milestones</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="milestones-page">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="NeuroShell Homepage">
+        <img class="brand-logo" src="assets/logo/NeuroShell_logo.png" alt="NeuroShell logo">
+        <span class="brand-text">NEURO<span class="brand-accent">SHELL</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="domain.html">Domain</a></li>
+          <li><a class="nav__link active" href="milestones.html" aria-current="page">Milestones</a></li>
+          <li><a class="nav__link" href="documents.html">Documents</a></li>
+          <li><a class="nav__link" href="slides.html">Slides</a></li>
+          <li><a class="nav__link" href="about.html">About us</a></li>
+          <li><a class="nav__link" href="contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__tools">
+        <button class="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="milestones-main">
+    <section class="milestones-banner">
+      <div class="container milestones-banner__inner">
+        <div class="breadcrumbs">Home / Milestones</div>
+        <h1>Milestones</h1>
+        <p>Every assessment in the project, with its details, date and marks.</p>
+      </div>
+    </section>
+
+    <div class="container milestones-shell">
+      <section class="assessment-picker" aria-labelledby="assessment-heading">
+        <h2 id="assessment-heading" class="sr-only">Select an assessment</h2>
+        <div class="assessment-select" data-assessment-select>
+          <button type="button" class="assessment-select__trigger" aria-expanded="false" aria-controls="assessment-menu">
+            <span class="selected-value">Progress Presentation 1</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <div id="assessment-menu" class="assessment-select__menu" role="listbox" aria-label="Assessment choices">
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="proposal">Project Proposal</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="proposal-presentation">Proposal Presentation</button>
+            <button class="assessment-option is-selected" type="button" role="option" aria-selected="true" data-target="progress-1">Progress Presentation 1</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="progress-2">Progress Presentation 2</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="checklist">Checklist Submission</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="website">Website</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="research-paper">Research Paper</button>
+            <button class="assessment-option" type="button" role="option" aria-selected="false" data-target="final-report">Final Report</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment-panels">
+        <article class="assessment-panel is-visible" data-assessment-panel="progress-1">
+          <div class="panel-header">
+            <h3>Progress Presentation 1</h3>
+            <span class="status-badge">Completed</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-card__label">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h7l5 5v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm5 1.5V8h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 13h8M8 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <span>Date</span>
+              </div>
+              <p>11 May 2026</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__label">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14h12M6 18h9M7 4h10l3 3v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm1 0v5h8V4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Marks allocated</span>
+              </div>
+              <p>[XX]%</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__label">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5h10a2.5 2.5 0 0 1 2.5 2.5v10A2.5 2.5 0 0 1 17 19.5H7A2.5 2.5 0 0 1 4.5 17V7A2.5 2.5 0 0 1 7 4.5zm0 4.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                <span>Assessment type</span>
+              </div>
+              <p>Presentation</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card__label">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                <span>Format</span>
+              </div>
+              <p>Panel presentation and live demo</p>
+            </div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>Each component's progress, design and prototype are presented to the panel and assessed on research problem, novelty, solution design and progress.</p>
+            <a href="https://mysliit-my.sharepoint.com/:p:/g/personal/it22249852_my_sliit_lk/IQBgI7Qn3QAMQrs066dyneU5AXNPzTn6Divm6sSsFFCoVbI?e=MB1jOr" class="panel-link">View slides</a>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="proposal" hidden>
+          <div class="panel-header">
+            <h3>Project Proposal</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>Mar 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Written proposal</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Document submission</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>Proposal outlines the research gap, system scope, problem statement, objectives, milestones and expected outcomes.</p>
+          </div>
+
+          <div class="proposal-list">
+            <div class="panel-details__title">Proposal sections</div>
+            <div class="proposal-list__grid">
+              <div class="proposal-section"><span class="proposal-section__id">IT22249852</span><span class="proposal-section__name">Karunarathna P.M.T.L</span><a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQAF5jmuWLNsQI5tGow_4tGvAQmVzAcKz9aFgSuK0Tscmv0?e=T8gx8h" class="proposal-section__link" target="_blank" rel="noopener">View document</a></div>
+              <div class="proposal-section"><span class="proposal-section__id">IT22121592</span><span class="proposal-section__name">Herath H.M.C.H.K</span><a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQB67j9AnArITIpHGzP89-GqAezB5lAAB0mwRd9ACUzhCLw?e=EN5DBw" class="proposal-section__link" target="_blank" rel="noopener">View document</a></div>
+              <div class="proposal-section"><span class="proposal-section__id">IT22230010</span><span class="proposal-section__name">Umayanga H.L.A</span><a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQA4ob6LZq5uRpV78_VpjcwTAU1TGYNDXgIc1M-ojcaYTB4?e=CYuRO4" class="proposal-section__link" target="_blank" rel="noopener">View document</a></div>
+              <div class="proposal-section"><span class="proposal-section__id">IT22083678</span><span class="proposal-section__name">SAHAN H.P.T</span><a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQAk9oE_F5ixSbCWD5CZqsuuATHDeFWzCJZOBoSgUG2hjJA?e=VoS1ri" class="proposal-section__link" target="_blank" rel="noopener">View document</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="proposal-presentation" hidden>
+          <div class="panel-header">
+            <h3>Proposal Presentation</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>Apr 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Presentation</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Panel review</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>Research team presents the project idea, feasibility and key architecture decisions before receiving faculty feedback.</p>
+            <a href="https://mysliit-my.sharepoint.com/:p:/g/personal/it22249852_my_sliit_lk/IQC6hDxdTOsWRJ-fyZ4ZTO4_AULDxXHSTRIL-7gSDbcFMf0?e=qc0dhR" class="panel-link">View slides</a>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="checklist" hidden>
+          <div class="panel-header">
+            <h3>Checklist Submission</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>May 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Submission</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Checklist review</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>The checklist validates milestones, required artifacts, documentation quality and project readiness for upcoming review phases.</p>
+          </div>
+
+          <div class="doc-list">
+            <div class="panel-details__title">Documents</div>
+            <div class="doc-list__items">
+              <div class="doc-item doc-item--submitted">
+                <span class="doc-status doc-status--done">Submitted</span>
+                <span class="doc-name">PPR Report - NeuroShell_R26-CS-018.docx</span>
+                <a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQD5KlfZbB-CQ6bMW6ZBTaX1AbRUEbfygAmo92bGUEl4pIE?e=ZEmkBd" class="doc-link">View</a>
+              </div>
+              <div class="doc-item doc-item--submitted">
+                <span class="doc-status doc-status--done">Submitted</span>
+                <span class="doc-name">SRS - NeuroShell Core Framework Combined.pdf</span>
+                <a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQC_R-qDQ28nT7wlekNXDJbuAUXNgY4cB2FBex2NR4EcDYQ?e=y7ucT8" class="doc-link">View</a>
+              </div>
+              <div class="doc-item doc-item--submitted">
+                <span class="doc-status doc-status--done">Submitted</span>
+                <span class="doc-name">Project Compliance Report</span>
+                <a href="#" class="doc-link">View</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="progress-2" hidden>
+          <div class="panel-header">
+            <h3>Progress Presentation 2</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>Jun 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Presentation</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Prototype review</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>Team presents progress against milestones, current implementation, test evidence and planned optimization path.</p>
+            <a href="https://mysliit-my.sharepoint.com/:p:/g/personal/it22249852_my_sliit_lk/IQC5S1JbTQTIQpl5NY-KNknJATchD-4qa_N5XT-La72fYRo?e=Wxm4H2" class="panel-link">View slides</a>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="final-report" hidden>
+          <div class="panel-header">
+            <h3>Final Report</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>Sep 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Report</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Document submission</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>The complete research report covering the full design, implementation, testing, evaluation and outcomes of the project.</p>
+            <a href="#" class="panel-link">View report</a>
+          </div>
+        </article>
+
+        <article class="assessment-panel" data-assessment-panel="research-paper" hidden>
+          <div class="panel-header">
+            <h3>Research Paper</h3>
+            <span class="status-badge status-badge--neutral">Pending</span>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card"><div class="info-card__label"><span>Date</span></div><p>Nov 2026</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Marks allocated</span></div><p>[XX]%</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Assessment type</span></div><p>Publication</p></div>
+            <div class="info-card"><div class="info-card__label"><span>Format</span></div><p>Paper submission</p></div>
+          </div>
+
+          <div class="panel-details">
+            <div class="panel-details__title">Details</div>
+            <p>Research paper summarising the system architecture, experiments, findings and contributions from the NeuroShell project.</p>
+            <a href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22249852_my_sliit_lk/IQAcEqZVxWQVT7plwtuPkUEyAc4BYEVjF8HvcY0kuvRaWcI?e=8ijdbQ" class="panel-link">View paper</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="timeline-section" aria-labelledby="timeline-heading">
+        <h3 id="timeline-heading">Assessment Timeline</h3>
+
+        <div class="timeline-wrap">
+          <div class="timeline-strip">
+            <div class="timeline-item is-done"><span>15th March 2026</span><strong>Proposal Submission</strong></div>
+            <div class="timeline-item is-done"><span>16th – 18th March 2026</span><strong>Proposal Presentation</strong></div>
+            <div class="timeline-item is-done"><span>13th May 2026</span><strong>Check List submission</strong></div>
+            <div class="timeline-item is-done"><span>11th – 13th May 2026</span><strong>Progress Presentation 1</strong></div>
+            <div class="timeline-item is-done"><span>31st Aug – 02nd Sep 2026</span><strong>Progress Presentation 2</strong></div>
+            <div class="timeline-item is-active"><span>11th October 2026</span><strong>Draft Thesis submission</strong></div>
+            <div class="timeline-item"><span>11th October 2026</span><strong>Website Submission</strong></div>
+            <div class="timeline-item"><span>14th October 2026</span><strong>Final Check List submission</strong></div>
+            <div class="timeline-item"><span>19th – 21st October 2026</span><strong>Final Presentation and Viva</strong></div>
+            <div class="timeline-item"><span>19th – 21st October 2026</span><strong>Website evaluation &amp; Logbook</strong></div>
+            <div class="timeline-item"><span>23rd October 2026</span><strong>Research Paper submission</strong></div>
+            <div class="timeline-item"><span>28th October 2026</span><strong>Final Thesis Submission</strong></div>
+            <div class="timeline-item"><span>1st December 2026</span><strong>Research Paper publication evidence</strong></div>
+          </div>
+        </div>
+
+        <div class="timeline-note">
+          <span class="info-dot">i</span>
+          <p>Dates and marks are updated as the schedule is confirmed.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer-brand-block">
+          <div class="footer-brand">
+            <svg class="brand-logo-icon" width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4C14.4772 4 10 8.47715 10 14C10 15.65 10.4042 17.2057 11.1197 18.5714C8.6791 19.8829 7 22.4925 7 25.5C7 29.6421 10.3579 33 14.5 33C15.6457 33 16.731 32.7431 17.7027 32.2826C18.4239 32.8837 19.3496 33.25 20.3571 33.25C22.014 33.25 23.4475 32.2598 24.0893 30.8393C25.0487 31.5772 26.2483 32 27.5 32C30.5376 32 33 29.5376 33 26.5C33 24.8153 32.2415 23.308 31.0456 22.2981C32.2599 21.0373 33 19.3541 33 17.5C33 13.3579 29.6421 10 25.5 10C24.8436 10 24.212 10.0843 23.6116 10.2417C22.6105 6.5501 19.2435 4 20 4Z" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 14C15 14 17 11 20 11C23 11 25 14 25 14" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 21C14 19 17 20 20 20C23 20 26 19 28 21" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+              <rect x="18" y="22" width="16" height="12" rx="3" fill="#081638" stroke="#38BDF8" stroke-width="1.5"/>
+              <path d="M21 26L24 28L21 30" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="26" y1="30" x2="30" y2="30" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="footer-brand-text">NEURO<span class="brand-accent">SHELL</span></div>
+          </div>
+          <p>An autonomous, natural language-driven orchestration framework for offensive security operations.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="slides.html">Slides</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Project Info</h4>
+          <ul>
+            <li>Group ID: R2C-CS-018</li>
+            <li>SLIIT Faculty of Computing</li>
+            <li>B.Sc. (Hons) IT - Cyber Security</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:email@address">Email address</a></li>
+            <li><a href="tel:+0000000000">Phone number</a></li>
+            <li>Location</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 NeuroShell • R2C-CS-018 • SLIIT Faculty of Computing</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/milestones.js"></script>
+</body>
+</html>

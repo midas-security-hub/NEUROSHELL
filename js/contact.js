@@ -1,16 +1,28 @@
 /* ============================================================
    NeuroShell — contact.js
-   Form validation and copy-template action
+   Form validation and email-sending via Gmail compose
    ============================================================ */
 (function () {
   "use strict";
 
+  var TO_EMAIL = "t.lakshan.k@gmail.com";
+
+  var TEMPLATE =
+    "Dear NeuroShell Team,\n\n" +
+    "My name is [your name] from [organization].\n" +
+    "I am writing regarding your Cyber Security project \"NeuroShell: An Autonomous, Natural Language-Driven Orchestration Framework for Offensive Security Operations\" (R26-CS-018).\n\n" +
+    "Category: [category]\n" +
+    "My email: [email]\n\n" +
+    "Inquiry:\n[inquiry]\n\n" +
+    "Sincerely,\n[your name]";
+
   document.addEventListener("DOMContentLoaded", function () {
     initContactForm();
     initCopyTemplate();
+    initLiveTemplate();
   });
 
-  /* Validate and handle the message template form client-side */
+  /* Validate the form, then open Gmail compose in the current tab */
   function initContactForm() {
     var form = document.querySelector("[data-contact-form]");
     if (!form) return;
@@ -28,11 +40,41 @@
         return;
       }
 
-      if (status) {
-        status.textContent = "Message ready. Thank you!";
-        status.style.color = "var(--color-success)";
-      }
-      form.reset();
+      var message = form.elements.message.value.trim();
+      var mailSubject = "NeuroShell Research Inquiry (R26-CS-018)";
+
+      var url =
+        "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(TO_EMAIL) +
+        "&su=" + encodeURIComponent(mailSubject) +
+        "&body=" + encodeURIComponent(message);
+
+      window.location.href = url;
+    });
+  }
+
+  /* Keep the message template in sync with the filled-in fields */
+  function initLiveTemplate() {
+    var form = document.querySelector("[data-contact-form]");
+    if (!form) return;
+
+    var source = form.querySelector("[data-template]");
+    var name = form.elements.name;
+    var email = form.elements.email;
+    var organization = form.elements.organization;
+    var subject = form.elements.subject;
+    var inquiry = form.elements.inquiry;
+    if (!source || !name || !email || !organization || !subject || !inquiry) return;
+
+    [name, email, organization, subject, inquiry].forEach(function (field) {
+      field.addEventListener("input", function () {
+        var body = TEMPLATE
+          .split("[your name]").join(name.value.trim() || "[your name]")
+          .split("[organization]").join(organization.value.trim() || "[organization]")
+          .split("[category]").join(subject.value || "[category]")
+          .split("[email]").join(email.value.trim() || "[email]")
+          .split("[inquiry]").join(inquiry.value.trim() || "[write your inquiry here]");
+        source.value = body;
+      });
     });
   }
 

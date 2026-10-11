@@ -10,29 +10,63 @@
   });
 
   function initAssessmentSelector() {
-    var buttons = document.querySelectorAll(".selector__item");
-    var details = document.querySelectorAll("[data-assessment]");
-    if (!buttons.length || !details.length) return;
+    var selectWrap = document.querySelector("[data-assessment-select]");
+    var trigger = document.querySelector(".assessment-select__trigger");
+    var options = document.querySelectorAll(".assessment-option");
+    var panels = document.querySelectorAll("[data-assessment-panel]");
 
-    buttons.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var target = btn.getAttribute("data-target");
+    if (!selectWrap || !trigger || !options.length || !panels.length) {
+      return;
+    }
 
-        buttons.forEach(function (b) {
-          b.classList.toggle("is-active", b === btn);
-          b.setAttribute("aria-selected", String(b === btn));
-        });
+    var selectedValue = document.querySelector(".selected-value");
 
-        details.forEach(function (panel) {
-          var match = panel.getAttribute("data-assessment") === target;
-          panel.hidden = !match;
-        });
+    function setActive(target) {
+      var selectedOption = Array.from(options).find(function (option) {
+        return option.getAttribute("data-target") === target;
+      });
+
+      if (!selectedOption || !selectedValue) {
+        return;
+      }
+
+      selectedValue.textContent = selectedOption.textContent.trim();
+
+      options.forEach(function (option) {
+        var active = option === selectedOption;
+        option.classList.toggle("is-selected", active);
+        option.setAttribute("aria-selected", String(active));
+      });
+
+      panels.forEach(function (panel) {
+        var match = panel.getAttribute("data-assessment-panel") === target;
+        panel.hidden = !match;
+        panel.classList.toggle("is-visible", match);
+      });
+
+      selectWrap.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+
+    trigger.addEventListener("click", function () {
+      var isOpen = selectWrap.classList.contains("is-open");
+      selectWrap.classList.toggle("is-open", !isOpen);
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!selectWrap.contains(event.target)) {
+        selectWrap.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    options.forEach(function (option) {
+      option.addEventListener("click", function () {
+        setActive(option.getAttribute("data-target"));
       });
     });
 
-    var first = document.querySelector(".selector__item");
-    if (first && !document.querySelector(".selector__item.is-active")) {
-      first.click();
-    }
+    setActive("progress-1");
   }
 })();
