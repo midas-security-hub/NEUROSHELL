@@ -48,7 +48,7 @@
     triage: {
       badge: "04",
       badgeClass: "badge--amber",
-      title: "Vulnerability Triage Engine",
+      title: "AI-Driven Vulnerability Analysis Engine",
       author: "Sahan H.P.T",
       paragraphs: [
         "Automated cybersecurity assessment tools generate extensive vulnerability information that often requires manual interpretation and prioritisation. Traditional severity-based assessment approaches, particularly those relying on the Common Vulnerability Scoring System (CVSS), do not independently establish whether a vulnerability has been exploited in real-world environments. This highlights the need for intelligent vulnerability analysis mechanisms that combine vulnerability intelligence with machine learning-based risk assessment.",
